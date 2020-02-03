@@ -1,4 +1,4 @@
-![vkbee](https://raw.githubusercontent.com/asyncvk/vkbee/master/bg.jpg)
+![vkbee](https://raw.githubusercontent.com/asyncvk/vkbee/master/bg.png)
 # vkbee
 Simple Async VKLibrary faster than vk_api
 ```python
