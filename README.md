@@ -11,7 +11,7 @@ import time
 
 
 async def main(loop):
-    token = "paste your token here
+    token = "paste your token here"
 
     vk = api.VkApi(token, loop=loop)
     vk_poll = longpoll.BotLongpoll(vk, "group id paste here,10)
