@@ -4,7 +4,7 @@ import time
 
 
 class BotLongpoll:
-    def __init__(self, vk, group_id, wait=25):
+    def __init__(self, vk, group_id, wait=10):
         self.group_id = group_id
         self.wait = wait
         self.vk = vk
