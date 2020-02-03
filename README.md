@@ -10,42 +10,30 @@ import time
 
 
 
+import aiohttp
+import asyncio
+import vkbee
+import time
+import datetime
+
 async def main(loop):
-    token = "paste your token here"
+    token = "tokenhere"
+    vk = vkbee.VkApi(token, loop=loop)
+    delta = datetime.timedelta(hours=8, minutes=0)  # разница от UTC. Можете вписать любое значение вместо 3
+    t = (datetime.datetime.now(datetime.timezone.utc) + delta)  # Присваиваем дату и время переменной «t»
+    nowtime = t.strftime("%H:%M")  # текущее время
+    nowdate = t.strftime("%d.%m.%Y")  # текущая дата
+    none={}
+    on = await vkbee.VkApi.call(vk,"friends.getOnline",none)
+    counted = len(on)  # считаем кол-во элементов в списке
 
-    vk = api.VkApi(token, loop=loop)
-    vk_poll = longpoll.BotLongpoll(vk, "group id paste here")
-
-    start_time = time.time()
-    event_count = 0
-    async for event in vk_poll.events():
-            
-        data = {
-            'random_id': 0,
-            'peer_id': event['object']['message']['peer_id'],
-            'message': 'Pre-alpha check longpoll'
-        }
-        
-
-        if event['object']['message']['peer_id'] < 2000000000:
-            if event['type'] == 'message_new':
-                asyncio.create_task(game.enter(event))
-
-            print('user')
-            print(event['object']['message']['peer_id'])
-            asyncio.create_task(vk.call('messages.send', data=data))
-        else:
-            print('chat')
-        
-        event_count += 1
-        work_time = time.time() - start_time
-        print(f'All Events - {event_count}')
-        print(f'Work Time - {work_time}')
-        avr_time = work_time / event_count
-        speed = event_count / work_time
-        print(f'Events in Second - {speed}')
-        print(f'Average Time - {avr_time}')
-
+    data = {
+        'text':'VKBee: '+nowtime + " ? " + nowdate + " ? " + "Друзей онлайн: " + str(counted)
+    }
+    while True:
+        a=await vkbee.VkApi.call(vk,'status.set',data)
+        print(a)
+        time.sleep(1)
 loop = asyncio.get_event_loop()
 loop.run_until_complete(main(loop))
 
