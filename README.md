@@ -1,4 +1,4 @@
-![vkbee](https://github.com/asyncvk/vkbee/blob/master/vkbee/bgtio.png?raw=true)
+﻿![vkbee](https://github.com/asyncvk/vkbee/blob/master/vkbee/bgtio.png?raw=true)
 ### vkbee
 ## Установка
 ```bash
