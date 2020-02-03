@@ -13,7 +13,7 @@ setuptools.setup(
     long_description_content_type="text/markdown",
     url="https://github.com/asyncvk/vkbee",
     packages=setuptools.find_packages(),
-    license="LGPLv3",
+    license="Mozilla Public License 2.0",
     keywords="vk api framework python",
     classifiers=[
         "Development Status :: 4 - Beta",
