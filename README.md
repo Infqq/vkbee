@@ -4,14 +4,6 @@ Simple Async VKLibrary faster than vk_api
 ```python
 import aiohttp
 import asyncio
-import longpoll
-import api
-import time
-
-
-
-import aiohttp
-import asyncio
 import vkbee
 import time
 import datetime
@@ -19,16 +11,16 @@ import datetime
 async def main(loop):
     token = "tokenhere"
     vk = vkbee.VkApi(token, loop=loop)
-    delta = datetime.timedelta(hours=8, minutes=0)  # разница от UTC. Можете вписать любое значение вместо 3
-    t = (datetime.datetime.now(datetime.timezone.utc) + delta)  # Присваиваем дату и время переменной «t»
-    nowtime = t.strftime("%H:%M")  # текущее время
-    nowdate = t.strftime("%d.%m.%Y")  # текущая дата
+    delta = datetime.timedelta(hours=8, minutes=0)  # Г°Г Г§Г­ГЁГ¶Г  Г®ГІ UTC. ГЊГ®Г¦ГҐГІГҐ ГўГЇГЁГ±Г ГІГј Г«ГѕГЎГ®ГҐ Г§Г­Г Г·ГҐГ­ГЁГҐ ГўГ¬ГҐГ±ГІГ® 3
+    t = (datetime.datetime.now(datetime.timezone.utc) + delta)  # ГЏГ°ГЁГ±ГўГ ГЁГўГ ГҐГ¬ Г¤Г ГІГі ГЁ ГўГ°ГҐГ¬Гї ГЇГҐГ°ГҐГ¬ГҐГ­Г­Г®Г© В«tВ»
+    nowtime = t.strftime("%H:%M")  # ГІГҐГЄГіГ№ГҐГҐ ГўГ°ГҐГ¬Гї
+    nowdate = t.strftime("%d.%m.%Y")  # ГІГҐГЄГіГ№Г Гї Г¤Г ГІГ 
     none={}
     on = await vkbee.VkApi.call(vk,"friends.getOnline",none)
-    counted = len(on)  # считаем кол-во элементов в списке
+    counted = len(on)  # Г±Г·ГЁГІГ ГҐГ¬ ГЄГ®Г«-ГўГ® ГЅГ«ГҐГ¬ГҐГ­ГІГ®Гў Гў Г±ГЇГЁГ±ГЄГҐ
 
     data = {
-        'text':'VKBee: '+nowtime + " ? " + nowdate + " ? " + "Друзей онлайн: " + str(counted)
+        'text':'VKBee: '+nowtime + " ? " + nowdate + " ? " + "Г„Г°ГіГ§ГҐГ© Г®Г­Г«Г Г©Г­: " + str(counted)
     }
     while True:
         a=await vkbee.VkApi.call(vk,'status.set',data)
