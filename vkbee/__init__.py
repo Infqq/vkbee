@@ -80,7 +80,7 @@ class BotLongpoll:
         self.start_time = time.time()
         self.request_count = 0
 
-    async def update_server(update_ts=True):
+    async def update_server(self,update_ts=True):
         data = {"group_id": self.group_id}
         # r = await self.s.post(self.method_url, data=data)
         r = await self.vk.call("groups.getLongPollServer", data=data)
