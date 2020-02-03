@@ -1,6 +1,7 @@
 ![vkbee](https://github.com/asyncvk/vkbee/blob/master/vkbee/bgtio.png?raw=true)
-# vkbee
+### vkbee
 Simple Async VKLibrary faster than vk_api
+# Пример работы
 ```python
 import aiohttp
 import asyncio
@@ -9,18 +10,18 @@ import time
 import datetime
 
 async def main(loop):
-    token = "tokenhere"
+    token = "сюдатокен"
     vk = vkbee.VkApi(token, loop=loop)
-    delta = datetime.timedelta(hours=8, minutes=0)  # ðàçíèöà îò UTC. Ìîæåòå âïèñàòü ëþáîå çíà÷åíèå âìåñòî 3
-    t = (datetime.datetime.now(datetime.timezone.utc) + delta)  # Ïðèñâàèâàåì äàòó è âðåìÿ ïåðåìåííîé «t»
-    nowtime = t.strftime("%H:%M")  # òåêóùåå âðåìÿ
-    nowdate = t.strftime("%d.%m.%Y")  # òåêóùàÿ äàòà
+    delta = datetime.timedelta(hours=8, minutes=0)  # разница от UTC. Можете вписать любое значение вместо 3
+    t = (datetime.datetime.now(datetime.timezone.utc) + delta)  # Присваиваем дату и время переменной «t»
+    nowtime = t.strftime("%H:%M")  # текущее время
+    nowdate = t.strftime("%d.%m.%Y")  # текущая дата
     none={}
     on = await vkbee.VkApi.call(vk,"friends.getOnline",none)
-    counted = len(on)  # ñ÷èòàåì êîë-âî ýëåìåíòîâ â ñïèñêå
+    counted = len(on)  # считаем кол-во элементов в списке
 
     data = {
-        'text':'VKBee: '+nowtime + " ? " + nowdate + " ? " + "Äðóçåé îíëàéí: " + str(counted)
+        'text':'VKBee: '+nowtime + " ● " + nowdate + " ● " + "Друзей онлайн: " + str(counted)
     }
     while True:
         a=await vkbee.VkApi.call(vk,'status.set',data)
