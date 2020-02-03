@@ -1,11 +1,11 @@
 import setuptools
 
-with open("README.md", "r") as fh:
+with open("README.md", "r",encoding='utf-8') as fh:
     long_description = fh.read()
 
 setuptools.setup(
     name="vkbee",
-    version="1.0",
+    version="1.3",
     author="YamkaFox",
     author_email="cryptoyamafox@gmail.com",
     description="Simple Async VKLibrary faster than vk_api",
