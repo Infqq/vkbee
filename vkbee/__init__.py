@@ -18,7 +18,7 @@ if __name__ == '__main__':
 
 
 class VkApi:
-    def __init__(self, token, loop, api_version="5.103"):
+    def __init__(token, loop, api_version="5.103"):
         self.token = token
         self.api_version = api_version
 
@@ -29,7 +29,7 @@ class VkApi:
         self.start_time = time.time()
         self.request_count = 0
 
-    async def call(self, method_name, data):
+    async def call(method_name, data):
         data["access_token"] = self.token
         data["v"] = self.api_version
 
@@ -54,7 +54,7 @@ class VkApi:
         print(f"Average Time - {avr_time}")
         return await r.json()
 
-    def sync_call(self, method_name, data):
+    def sync_call(method_name, data):
         data["access_token"] = self.token
         data["v"] = self.api_version
 
@@ -66,7 +66,7 @@ class VkApi:
 
 
 class BotLongpoll:
-    def __init__(self, vk, group_id, wait=10):
+    def __init__(vk, group_id, wait=10):
         self.group_id = group_id
         self.wait = wait
         self.vk = vk
@@ -80,7 +80,7 @@ class BotLongpoll:
         self.start_time = time.time()
         self.request_count = 0
 
-    async def update_server(self, update_ts=True):
+    async def update_server(update_ts=True):
         data = {"group_id": self.group_id}
         # r = await self.s.post(self.method_url, data=data)
         r = await self.vk.call("groups.getLongPollServer", data=data)
@@ -91,7 +91,7 @@ class BotLongpoll:
         if update_ts:
             self.ts = r["response"]["ts"]
 
-    async def get_events(self):
+    async def get_events():
         params = {
             "act": "a_check",
             "key": self.key,
@@ -125,7 +125,7 @@ class BotLongpoll:
 
         return []
 
-    async def events(self):
+    async def events():
         await self.update_server()
         while True:
             for event in await self.get_events():
