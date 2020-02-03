@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="vkbee",
-    version="0.1",
+    version="0.2",
     author="YamkaFox",
     author_email="cryptoyamafox@gmail.com",
     description="Simple Async VKLibrary faster than vk_api",
@@ -13,7 +13,7 @@ setuptools.setup(
     long_description_content_type="text/markdown",
     url="https://github.com/asyncvk/vkbee",
     packages=setuptools.find_packages(),
-    license="LGPLv3",
+    license="Mozilla Public License 2.0",
     keywords="vk api framework python",
     classifiers=[
         "Development Status :: 4 - Beta",
@@ -24,7 +24,6 @@ setuptools.setup(
         "Programming Language :: Python :: 3.5",
         "Programming Language :: Python :: 3.6",
         "Programming Language :: Python :: 3.7",
-        "License :: OSI Approved :: Mozilla Public License 2.0",
         "Operating System :: OS Independent",
     ],
     project_urls={
