@@ -14,7 +14,7 @@ async def main(loop):
     token = "paste your token here"
 
     vk = api.VkApi(token, loop=loop)
-    vk_poll = longpoll.BotLongpoll(vk, "group id paste here",10)
+    vk_poll = longpoll.BotLongpoll(vk, "group id paste here")
 
     start_time = time.time()
     event_count = 0
