@@ -37,8 +37,4 @@ loop.run_until_complete(main(loop))
 ```
 
 
-### Document
-## Api
-```python
-await vkbee.VkApi.call(vk,'status.get',{'status':'VKBee is fastest!','group_id':1}
-```
+
