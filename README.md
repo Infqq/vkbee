@@ -1,5 +1,9 @@
 ![vkbee](https://github.com/asyncvk/vkbee/blob/master/vkbee/bgtio.png?raw=true)
 ### vkbee
+## Установка
+```bash
+pip3 install vkbee
+```
 Simple Async VKLibrary faster than vk_api
 # Пример работы
 ```python
