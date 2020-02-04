@@ -127,7 +127,7 @@ class BotLongpoll:
         return []
 
     async def events(self):
-        await self.update_server()
+        await self.update_server(self)
         while True:
             for event in await self.get_events():
                 yield event
