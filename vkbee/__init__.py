@@ -89,6 +89,7 @@ class BotLongpoll:
         self.url = self.server
 
         if update_ts:
+            print(r)
             self.ts = r["response"]["ts"]
 
     async def get_events(self):
@@ -126,7 +127,7 @@ class BotLongpoll:
         return []
 
     async def events(self):
-        await self.update_server()
+        await self.update_server(self)
         while True:
             for event in await self.get_events():
                 yield event
