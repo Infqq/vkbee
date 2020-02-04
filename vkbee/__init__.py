@@ -67,6 +67,7 @@ class VkApi:
 
 class BotLongpoll:
     def __init__(self,vk, group_id, wait=10):
+        global group_id
         self.group_id = group_id
         self.wait = wait
         self.vk = vk
