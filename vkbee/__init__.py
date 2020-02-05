@@ -106,7 +106,7 @@ class BotLongpoll:
         # work_time = time.time() - self.start_time
         # avr_time = work_time / self.request_count
         # speed = self.request_count / work_time
-        print(f'All Get Events - {self.request_count}')
+        #print(f'All Get Events - {self.request_count}')
         # print(f'Work Time - {work_time}')
         # print(f'Requests in Second - {speed}')
         # print(f'Average Time - {avr_time}')
@@ -174,7 +174,7 @@ class UserLongpoll:
         # work_time = time.time() - self.start_time
         # avr_time = work_time / self.request_count
         # speed = self.request_count / work_time
-        print(f'All Get Events - {self.request_count}')
+        #print(f'All Get Events - {self.request_count}')
         # print(f'Work Time - {work_time}')
         # print(f'Requests in Second - {speed}')
         # print(f'Average Time - {avr_time}')
@@ -200,3 +200,4 @@ class UserLongpoll:
             for event in await self.get_events():
                 await self.update_server()
                 yield event
+             
