@@ -130,7 +130,6 @@ class BotLongpoll:
     async def events(self):
         await self.update_server(self)
         while True:
-            await self.update_server()
             for event in await self.get_events():
                 await self.update_server()
                 yield event
@@ -198,7 +197,6 @@ class UserLongpoll:
 
     async def events(self):
         while True:
-            await self.update_server()
             for event in await self.get_events():
                 await self.update_server()
                 yield event
