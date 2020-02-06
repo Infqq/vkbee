@@ -2,6 +2,8 @@
 
 [Documentation](https://asyncvk.github.io)
 
+[Example Bot](https://pastebin.com/raw/hxhXPyb9)
+
 ### vkbee
 ## Установка
 ```bash
