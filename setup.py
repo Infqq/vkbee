@@ -1,12 +1,12 @@
 import setuptools
 
-with open("README.md", "r",encoding='utf-8') as fh:
+with open("README.md", "r", encoding="utf-8") as fh:
     long_description = fh.read()
 
 setuptools.setup(
     name="vkbee",
-    version="2.0",
-    authors=["YamkaFox","sergeyfilippov1"],
+    version="2.1",
+    authors=["YamkaFox", "sergeyfilippov1"],
     author_email="cryptoyamafox@gmail.com",
     description="Simple Async VKLibrary faster than vk_api",
     long_description=long_description,
@@ -31,8 +31,5 @@ setuptools.setup(
         "Documentation": "https://github.com/asyncvk/vkbee",
     },
     python_requires=">=2",
-    install_requires=[
-        "aiohttp",
-        "requests"
-    ]
+    install_requires=["aiohttp", "requests"],
 )
