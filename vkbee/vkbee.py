@@ -7,6 +7,8 @@ import requests
 import time
 import asyncio
 
+from .exceptions import *
+
 """
 :authors: sergeyfilippov1, YamkaFox
 :license: Mozilla Public License, version 2.0, see LICENSE file
@@ -38,6 +40,10 @@ class VkApi:
         r = await r.json()
 
         if "error" in r:
+            if r["error_code"] == 6:
+                logger.warning("Too many requests per second! Sleeping 0.34 secs")
+                sleep(0.34)
+                call(method_name)
             raise api_error(
                 f'{r["error"]["error_msg"]} ({r["error"]["error_code"]})')
 
