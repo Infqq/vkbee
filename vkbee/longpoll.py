@@ -1,6 +1,5 @@
 import aiohttp
 import json
-import time
 import asyncio
 
 from collections import defaultdict
