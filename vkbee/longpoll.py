@@ -2,7 +2,7 @@ import aiohttp
 import json
 import asyncio
 
-from collections import defaultdict
+
 from datetime import datetime
 from enum import IntEnum
 
