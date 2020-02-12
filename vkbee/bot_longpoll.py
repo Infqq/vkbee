@@ -1,5 +1,4 @@
 import aiohttp
-import requests
 import time
 import asyncio
 import exceptions
