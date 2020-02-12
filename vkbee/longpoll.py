@@ -1,6 +1,5 @@
 import aiohttp
 import json
-import requests
 import time
 import asyncio
 
