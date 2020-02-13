@@ -297,7 +297,7 @@ class VkBeeLongpoll:
             "mode": 234
         }
 
-        response = await self.vk.s.get(self.url, params=params)
+        response = await self.vk.s.get("https://"+self.url, params=params)
 
         self.request_count += 1
 
