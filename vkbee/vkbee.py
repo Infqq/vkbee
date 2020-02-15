@@ -6,6 +6,7 @@ import aiohttp
 import requests
 import time
 import asyncio
+import logging
 
 from .exceptions import *
 
