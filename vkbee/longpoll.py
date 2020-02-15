@@ -1,10 +1,7 @@
 import aiohttp
-import json
-import requests
-import time
 import asyncio
 
-from collections import defaultdict
+
 from datetime import datetime
 from enum import IntEnum
 
@@ -300,7 +297,7 @@ class VkBeeLongpoll:
             "mode": 234
         }
 
-        response = await self.vk.s.get(self.url, params=params)
+        response = await self.vk.s.get("https://"+self.url, params=params)
 
         self.request_count += 1
 
