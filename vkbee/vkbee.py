@@ -20,7 +20,8 @@ from .exceptions import *
 class VkApi:
     def __init__(self, token, loop, api_version="5.103"):
         self.error_handlers = {
-            TOO_MANY_RPS_CODE: self.too_many_rps_handler,
+            TOO_MANY_RPS_CODE: self.async_too_many_rps_handler,
+            "NON-ASYNC_RPS": self.rps_handler,
         }
 
         self.token = token
@@ -34,7 +35,13 @@ class VkApi:
         self.request_count = 0
         self.logger = logging.getLogger("vkbee")
 
-    def too_many_rps_handler(self, error):
+    def rps_handler(self, error):
+        self.logger.warning("Too many requests in second!! Sleeping 0.5 secs")
+
+        time.sleep(0.5)
+        return error.nonasync_try_method()
+
+    async def async_too_many_rps_handler(self, error):
         """ Обработчик ошибки "Слишком много запросов в секунду".
             Ждет полсекунды и пробует отправить запрос заново
         :param error: исключение
@@ -43,7 +50,7 @@ class VkApi:
         self.logger.warning("Too many requests in second!! Sleeping 0.5 secs")
 
         time.sleep(0.5)
-        return error.try_method()
+        return await error.try_method()
 
     async def call(self, method_name, data):
         data["access_token"] = self.token
@@ -58,9 +65,9 @@ class VkApi:
         r = await r.json()
 
         if "error" in r:
-            error = api_error(self, self.method_name, self.data, r["error"])
+            error = api_error(self, method_name, data, r["error"])
             if error.code in self.error_handlers:
-                response = self.error_handlers[error.code](error)
+                response = await self.error_handlers[error.code](error)
 
                 if response is not None:
                     return response
@@ -77,9 +84,9 @@ class VkApi:
         r = requests.post(url, data=data).json()
 
         if "error" in r:
-            error = api_error(self, self.method_name, self.data, r["error"])
-            if error.code in self.error_handlers:
-                response = self.error_handlers[error.code](error)
+            error = api_error(self, method_name, data, r["error"])
+            if error.code == 6:
+                response = self.error_handlers["NON-ASYNC_RPS"](error)
 
                 if response is not None:
                     return response
