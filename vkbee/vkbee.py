@@ -77,9 +77,16 @@ class VkApi:
         r = requests.post(url, data=data).json()
 
         if "error" in r:
-            raise api_error(f'{r["error"]["error_msg"]} ({r["error"]["error_code"]})')
+            error = api_error(self, self.method_name, self.data, r["error"])
+            if error.code in self.error_handlers:
+                response = self.error_handlers[error.code](error)
 
-        return r
+                if response is not None:
+                    return response
+
+            raise error
+
+        return r["response"]
 
     def get_api(self):
         return ApiMethod(self)
