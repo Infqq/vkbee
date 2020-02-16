@@ -15,7 +15,7 @@ class api_error(BasicError):
     
     def nonasync_try_method(self):
         return self.vk.sync_call(self.method, self.values)
-    def try_method(self):
+    async def try_method(self):
         """ Отправить запрос заново """
 
         return await self.vk.call(self.method, self.values)
