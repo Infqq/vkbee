@@ -12,11 +12,13 @@ class api_error(BasicError):
         self.values = values
         self.code = error["error_code"]
         self.error = error
-
+    
+    def nonasync_try_method(self):
+        return self.vk.sync_call(self.method, self.values)
     def try_method(self):
         """ Отправить запрос заново """
 
-        return self.vk.method(self.method, self.values)
+        return await self.vk.call(self.method, self.values)
 
     def __str__(self):
         return "{} ({})".format(self.error["error_msg"], self.code)
