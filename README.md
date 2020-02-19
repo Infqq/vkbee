@@ -9,6 +9,12 @@
 ```bash
 pip3 install vkbee
 ```
+## Установка стабилного лонгпула
+```bash
+pip3 install vkbee==1.6
+```
+
+
 Simple Async VKLibrary faster than vk_api
 # Пример работы
 ```python
