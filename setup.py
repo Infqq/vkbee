@@ -17,8 +17,6 @@ setuptools.setup(
     keywords="vk api framework python",
     classifiers=[
         "Development Status :: 4 - Beta",
-        "Programming Language :: Python :: 2",
-        "Programming Language :: Python :: 2.7",
         "Programming Language :: Python :: 3",
         "Programming Language :: Python :: 3.4",
         "Programming Language :: Python :: 3.5",
@@ -30,6 +28,6 @@ setuptools.setup(
         "Github": "https://github.com/asyncvk/vkbee",
         "Documentation": "https://github.com/asyncvk/vkbee",
     },
-    python_requires=">=2",
-    install_requires=["aiohttp", "requests"],
+    python_requires=">=3.6",
+    install_requires=["aiohttp", "requests","six"],
 )
