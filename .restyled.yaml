@@ -1,3 +1,5 @@
+enabled: true
+pull_requests: true
 ---
 image: restyled/restyler-autopep8:v1.4.4
 command:
