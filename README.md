@@ -4,6 +4,8 @@
 
 [Example Bot](https://pastebin.com/raw/hxhXPyb9)
 
+[VK](https://vk.me/join/AJQ1d0zSjRa17i3RkVt3m5KH)
+
 ### vkbee
 ## Установка
 ```bash
