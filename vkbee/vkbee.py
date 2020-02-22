@@ -68,10 +68,10 @@ class VkApi:
             error = api_error(self, method_name, data, r["error"])
             if error.code in self.error_handlers:
                 response = await self.error_handlers[error.code](error)
-
                 if response is not None:
                     return response
-
+        else:
+             return r       
             raise error
 
         return r["response"]
