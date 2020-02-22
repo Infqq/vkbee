@@ -70,9 +70,10 @@ class VkApi:
                 response = await self.error_handlers[error.code](error)
                 if response is not None:
                     return response
+            raise error
         else:
              return r       
-            raise error
+            
 
         return r["response"]
 
