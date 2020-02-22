@@ -72,7 +72,7 @@ class VkApi:
                     return response
             raise error
         else:
-             return r       
+             return r['response']       
             
 
         return r["response"]
