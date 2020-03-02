@@ -1,3 +1,6 @@
+import time
+import asyncio
+import json
 class BotLongpoll:
     def __init__(self,vk, group_id, wait=10):
         self.group_id = group_id
