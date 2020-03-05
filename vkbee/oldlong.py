@@ -13,6 +13,13 @@ __authors__ = ["YamkaFox","sergeyfillipov1"]
 
 if __name__ == '__main__':
     print('Dont run me')
+def run_async_background(coro):
+    def func():
+        loop = asyncio.new_event_loop()
+        loop.run_until_complete(coro)
+        loop.close()
+    Thread(target=func).start()
+   
 class BotLongpoll:
     def __init__(self,vk, group_id, wait=10):
         self.group_id = group_id
@@ -80,4 +87,6 @@ class BotLongpoll:
         while True:
             for event in await self.get_events():
                 await self.update_server()
-                yield event
+                 async def vzlom(jopi):
+                    yield jopi
+                run_async_background(self.vzlom(event))
