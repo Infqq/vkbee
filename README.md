@@ -11,7 +11,7 @@
     <img alt="Downloads" src="https://pepy.tech/badge/vkbee">
 </p>
 
-https://pepy.tech/badge/vkbee
+
 
 
 ### vkbee
