@@ -1,6 +1,18 @@
+# -*- coding: utf-8 -*-
+# author: asyncvk
+import aiohttp
+import json
+import requests
 import time
 import asyncio
-import json
+
+
+__copyright__ = "2020"
+__version__ = "0.1"
+__authors__ = ["YamkaFox","sergeyfillipov1"]
+
+if __name__ == '__main__':
+    print('Dont run me')
 class BotLongpoll:
     def __init__(self,vk, group_id, wait=10):
         self.group_id = group_id
