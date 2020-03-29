@@ -5,7 +5,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
 
 setuptools.setup(
     name="vkbee",
-    version="3.6.2",
+    version="3.7",
     authors=["YamkaFox", "sergeyfilippov1"],
     author_email="cryptoyamafox@gmail.com",
     description="Simple Async VKLibrary faster than vk_api",
@@ -29,5 +29,5 @@ setuptools.setup(
         "Documentation": "https://github.com/asyncvk/vkbee",
     },
     python_requires=">=3.6",
-    install_requires=["aiohttp", "requests", "six", "sentry-sdk==0.14.2", "uvloop"],
+    install_requires=["aiohttp", "requests", "six", "sentry-sdk==0.14.2"],
 )
