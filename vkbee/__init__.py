@@ -4,8 +4,8 @@ try:
  if uvspeed:
   import uvloop
   uvloop.install()
-except:
- pass
+except Exception as err:
+ print('[UVSpeed] Failed to build wheel: '+str(err)
 from .vkbee import VkApi
 from .exceptions import *
 
