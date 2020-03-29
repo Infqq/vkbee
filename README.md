@@ -14,7 +14,17 @@
 
 
 
-### vkbee
+# vkbee
+
+## Ultra-Fast speed by uvloop
+
+<p>You need add definer in your code</p>
+
+```python
+uvspeed = True
+import vkbee
+```
+
 ## Установка
 ```bash
 pip3 install vkbee
