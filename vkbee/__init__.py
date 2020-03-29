@@ -5,7 +5,7 @@ try:
   import uvloop
   uvloop.install()
 except Exception as err:
- print('[UVSpeed] Failed to build wheel: '+str(err)
+ print('[UVSpeed] Failed to build wheel: '+str(err))
 from .vkbee import VkApi
 from .exceptions import *
 
