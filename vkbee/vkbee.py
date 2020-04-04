@@ -72,10 +72,10 @@ class VkApi:
                     return response
             raise error
         else:
-             return r['response']       
+             return r       
             
 
-        return r["response"]
+        return r
 
     def sync_call(self, method_name, data):
         data["access_token"] = self.token
