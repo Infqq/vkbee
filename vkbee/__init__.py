@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 # author: asyncvk
 try:
- if True:
+ if False:
   import uvloop
   uvloop.install()
 except Exception as err:
