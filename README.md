@@ -14,15 +14,14 @@
 
 
 
-# vkbee
+## vkbee
 
-## Установка
+# Установка
 ```bash
 pip3 install vkbee
 ```
 
 
-Simple Async VK library faster than vk_api
 # Пример работы
 ```python
 import asyncio
