@@ -1,6 +1,6 @@
 ﻿![vkbee](https://github.com/UHl0aG9uZWVy/vkbee/raw/master/logo.png)
+<h1 align="center">VKBee - простая в использовании библиотека для взаимодействия с API ВКонтакте</h1>
 <p align="center">
-    <h1>VKBee - простая в использовании библиотека для взаимодействия с API ВКонтакте>
     <img alt="Made with Python" src="https://img.shields.io/badge/Made%20with-Python-%23FFD242?logo=python&logoColor=white">
     <img alt="Downloads" src="https://pepy.tech/badge/vkbee">
 </p>
