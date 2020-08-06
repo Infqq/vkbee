@@ -22,7 +22,7 @@ async def main(loop):
     vk = oldlong.VkApi(token=token, loop=loop)
     longpoll = oldlong.BotLongpoll(vk, 'groupid', 10)
 
-    for event in longpoll.events():
+    async for event in longpoll.events():
         user_id = event['object']['message']['from_id']
         message_text = event['object']['message']['text']
         await vkbee.VkApi.call(vk, 'messages.send', {'user_id': user_id, 'message': message_text, 'random_id': 0})
