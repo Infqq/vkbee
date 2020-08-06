@@ -2,7 +2,7 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
 </head>
 
-![vkbee](https://github.com/asyncvk/vkbee/blob/master/logo.png?raw=true)
+![vkbee](https://github.com/UHl0aG9uZWVy/vkbee/raw/master/logo.png)
 
 [VK chat](https://vk.me/join/AJQ1d0zSjRa17i3RkVt3m5KH)
 
