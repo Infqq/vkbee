@@ -197,7 +197,6 @@ class BotLongpoll:
         self.url = self.server
 
         if update_ts:
-            print(r)
             self.ts = r["response"]["ts"]
 
     async def get_events(self):

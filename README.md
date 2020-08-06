@@ -1,6 +1,4 @@
-﻿
-
-![vkbee](https://github.com/UHl0aG9uZWVy/vkbee/raw/master/logo.png)
+﻿![vkbee](https://github.com/UHl0aG9uZWVy/vkbee/raw/master/logo.png)
 
 <p align="center">
     <img alt="Made with Python" src="https://img.shields.io/badge/Made%20with-Python-%23FFD242?logo=python&logoColor=white">

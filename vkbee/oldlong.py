@@ -70,13 +70,11 @@ class BotLongpoll:
         data = {"group_id": self.group_id}
         # r = await self.s.post(self.method_url, data=data)
         r = await self.vk.call("groups.getLongPollServer", data=data)
-        print(r)
         self.key = r["response"]["key"]
         self.server = r["response"]["server"]
         self.url = self.server
 
         if update_ts:
-            print(r)
             self.ts = r["response"]["ts"]
 
     async def get_events(self):
