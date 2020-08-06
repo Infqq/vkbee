@@ -14,15 +14,15 @@
 
 
 
-## vkbee
+# vkbee
 
-# Установка
+## Установка
 ```bash
 pip3 install vkbee
 ```
 
 
-# Пример работы
+## Пример работы
 ```python
 import asyncio
 import vkbee
