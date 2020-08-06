@@ -5,12 +5,14 @@
     <img alt="Downloads" src="https://pepy.tech/badge/vkbee">
 </p>
 
+**vkbee** - простая в использовании библиотека для взаимодействия с API ВКонтакте
+
 ## Установка
 ```bash
-pip install vkbee
+$ pip install vkbee
 ```
 
-## Пример работы
+## Простой пример
 ```python
 import asyncio
 import vkbee
