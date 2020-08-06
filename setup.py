@@ -5,10 +5,10 @@ with open("README.md", "r", encoding="utf-8") as fh:
 
 setuptools.setup(
     name="vkbee",
-    version="3.8.2",
+    version="3.9",
     authors=["YamkaFox", "sergeyfilippov1", "UHl0aG9uZWVy"],
     author_email="cryptoyamafox@gmail.com",
-    description="Simple Async VKLibrary faster than vk_api",
+    description="Simple async VK library faster than vk_api",
     long_description=long_description,
     long_description_content_type="text/markdown",
     url="https://github.com/asyncvk/vkbee",
@@ -26,7 +26,7 @@ setuptools.setup(
     ],
     project_urls={
         "Github": "https://github.com/asyncvk/vkbee",
-        "Documentation": "https://github.com/asyncvk/vkbee",
+        "Documentation": "https://github.com/UHl0aG9uZWVy/vkbee/blob/master/docs/docs.md",
     },
     python_requires=">=3.6",
     install_requires=["aiohttp", "requests", "six", "sentry-sdk==0.14.2"],
