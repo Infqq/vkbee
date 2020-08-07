@@ -26,7 +26,7 @@ setuptools.setup(
     ],
     project_urls={
         "Github": "https://github.com/asyncvk/vkbee",
-        "Documentation": "https://github.com/UHl0aG9uZWVy/vkbee/blob/master/docs/docs.md",
+        "Documentation": "https://github.com/asyncvk/vkbee/blob/master/docs/docs.md",
     },
     python_requires=">=3.6",
     install_requires=["aiohttp", "requests", "six", "sentry-sdk==0.14.2"],
