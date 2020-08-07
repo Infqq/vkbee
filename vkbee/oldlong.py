@@ -4,7 +4,7 @@ import asyncio
 import aiohttp
 
 class VkApi:
-    def __init__(self,token, loop, api_version="5.103"):
+    def __init__(self,token, loop, api_version="5.122"):
         self.token = token
         self.api_version = api_version
 
