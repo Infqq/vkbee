@@ -9,8 +9,6 @@ setuptools.setup(
     authors=["YamkaFox", "sergeyfilippov1", "UHl0aG9uZWVy"],
     author_email="cryptoyamafox@gmail.com",
     description="Simple async VK library faster than vk_api",
-    long_description=long_description,
-    long_description_content_type="text/markdown",
     url="https://github.com/asyncvk/vkbee",
     packages=setuptools.find_packages(),
     license="Mozilla Public License 2.0",
