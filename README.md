@@ -21,12 +21,11 @@ $ pip install https://github.com/asyncvk/vkbee/archive/master.zip
 import asyncio
 import vkbee
 
-from vkbee import oldlong
+from vkbee import longpoll
 
 async def main(loop):
-    token = 'token'
-    vk = oldlong.VkApi(token=token, loop=loop)
-    longpoll = oldlong.BotLongpoll(vk, 'groupid', 10)
+    vk = longpoll.VkApi(token='token', loop=loop)
+    longpoll = longpoll.BotLongpoll(vk, 'groupid', 10)
 
     async for event in longpoll.events():
         user_id = event['object']['message']['from_id']
