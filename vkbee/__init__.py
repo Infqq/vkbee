@@ -6,7 +6,7 @@ try:
   uvloop.install()
 except Exception as err:
  print('[UVSpeed] Failed to build wheel: '+str(err))
-from .vkbee import VkApi
+from .vkbee import API
 from .exceptions import *
 
 import sentry_sdk

@@ -22,7 +22,6 @@ import asyncio
 import vkbee
 
 from vkbee.longpoll import BotLongpoll, API
-from vkbee.vkbee import API
 
 async def main(loop):
     vk_session = API(token='token', loop=loop)
@@ -31,7 +30,7 @@ async def main(loop):
     async for event in longpoll.events():
         user_id = event['object']['message']['from_id']
         message_text = event['object']['message']['text']
-        await API.call(vk_session, 'messages.send', {'user_id': user_id, 'message': message_text, 'random_id': 0})
+        await vkbee.API.call(vk_session, 'messages.send', {'user_id': user_id, 'message': message_text, 'random_id': 0})
 
 loop = asyncio.get_event_loop()
 loop.run_until_complete(main(loop))
