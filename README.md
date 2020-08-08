@@ -10,7 +10,7 @@
 ```bash
 $ pip install vkbee
 ```
-Из GitHub:
+Из GitHub (рекомендуется):
 ```bash
 $ pip install https://github.com/asyncvk/vkbee/archive/master.zip
 ```
