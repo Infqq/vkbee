@@ -3,7 +3,7 @@ import time
 import asyncio
 import aiohttp
 
-class VkApi:
+class API:
     def __init__(self,token, loop, api_version="5.122"):
         self.token = token
         self.api_version = api_version
@@ -116,5 +116,4 @@ class BotLongpoll:
                 await self.update_server()
                 yield event
 
-
-#class UserLongpoll:
+# class UserLongpoll:

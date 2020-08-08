@@ -17,7 +17,7 @@ from .exceptions import *
 """
 
 
-class VkApi:
+class API:
     def __init__(self, token, loop, api_version="5.122"):
         self.error_handlers = {
             TOO_MANY_RPS_CODE: self.async_too_many_rps_handler,
