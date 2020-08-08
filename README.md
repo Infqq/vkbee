@@ -16,7 +16,7 @@ $ pip install https://github.com/asyncvk/vkbee/archive/master.zip
 ```
 > Минимальная версия Python - 3.6
 
-## Простой пример
+## Пример использования
 ```python
 import asyncio
 import vkbee
