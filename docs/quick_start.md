@@ -10,7 +10,7 @@ import vkbee
  ```python
 from vkbee import API
 async def main(loop):
-    vk=API(token='token', loop=loop)
+    vk = API(token='token', loop=loop)
   ```
 ### Разбор аргументов
 | Параметр | Описание |
@@ -22,7 +22,7 @@ async def main(loop):
  ```python
 from vkbee.longpoll import BotLongpoll, Session
 async def main(loop):
-    vk=Session(token='token', loop=loop)
+    vk = Session(token='token', loop=loop)
     longpoll = BotLongpoll(vk_session, groupid, wait)
   ```
 ### Разбор аргументов
