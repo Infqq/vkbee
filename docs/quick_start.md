@@ -23,7 +23,7 @@ from vkbee import API
 from vkbee.longpoll import BotLongpoll, Session
 async def main(loop):
     vk=Session(token='token', loop=loop)
-    longpoll = BotLongpoll(vk_session, groupid, timespeak)
+    longpoll = BotLongpoll(vk_session, groupid, wait)
   ```
 ### Разбор аргументов
 | Параметр | Описание |
@@ -32,4 +32,4 @@ async def main(loop):
 | loop  | Ваш event-loop для привязки к нему
 | vk_session | Ваша сессия созданная строкой выше
 | groupid  | Числовой идентификатор сообщества для подключения бота (строка)
-| timespeak | Время жизни запроса обновлений новых событий (в сек, желательно 10)
+| wait | Время жизни запроса обновлений новых событий (в сек, желательно 10)
