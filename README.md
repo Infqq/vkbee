@@ -33,4 +33,4 @@ loop = asyncio.get_event_loop()
 loop.run_until_complete(main(loop))
 ```
 
-Больше примеров имеется в [документации](https://github.com/asyncvk/vkbee/blob/master/docs/docs.md)
+Больше примеров имеется в [документации](https://github.com/asyncvk/vkbee/blob/master/docs/docs.md
