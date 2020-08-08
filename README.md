@@ -6,9 +6,13 @@
 </p>
 
 ## Установка
-С помощью pip:
+Из PyPI:
 ```bash
 $ pip install vkbee
+```
+Из GitHub:
+```bash
+$ pip install https://github.com/asyncvk/vkbee/archive/master.zip
 ```
 > Минимальная версия Python - 3.6
 

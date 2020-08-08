@@ -25,7 +25,7 @@ setuptools.setup(
         "Operating System :: OS Independent",
     ],
     project_urls={
-        "Github": "https://github.com/asyncvk/vkbee",
+        "GitHub": "https://github.com/asyncvk/vkbee",
         "Documentation": "https://github.com/asyncvk/vkbee/blob/master/docs/docs.md",
     },
     python_requires=">=3.6",
