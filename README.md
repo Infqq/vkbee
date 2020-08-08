@@ -1,4 +1,4 @@
-﻿![vkbee](https://github.com/asyncvk/vkbee/raw/master/logo.png)
+﻿![vkbee](https://github.com/vkbee/vkbee/raw/master/logo.png)
 <h1 align="center">VKBee - простая в использовании библиотека для взаимодействия с API ВКонтакте</h1>
 <p align="center">
     <img alt="Made with Python" src="https://img.shields.io/badge/Made%20with-Python-%23FFD242?logo=python&logoColor=white">
@@ -12,7 +12,7 @@ $ pip install vkbee
 ```
 Из GitHub (рекомендуется):
 ```bash
-$ pip install https://github.com/asyncvk/vkbee/archive/master.zip
+$ pip install https://github.com/vkbee/vkbee/archive/master.zip
 ```
 > Минимальная версия Python - 3.6
 
@@ -38,4 +38,4 @@ loop = asyncio.get_event_loop()
 loop.run_until_complete(main(loop))
 ```
 
-Более расширенное использование описано в [документации](https://github.com/asyncvk/vkbee/blob/master/docs/docs.md)
+Более расширенное использование описано в [документации](https://github.com/vkbee/vkbee/blob/master/docs/docs.md)
