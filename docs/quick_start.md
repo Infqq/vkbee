@@ -6,7 +6,7 @@ import vkbee
 ```
 
 # Авторизация
- - ## Для работы с API
+ - ## Для работы с API (1 вид)
  ```python
 from vkbee import API
 async def main(loop):
@@ -17,7 +17,7 @@ async def main(loop):
 | -------- | ---------|
 | token | Ключ для доступа к вашему аккаунту
 | loop  | Ваш event-loop для привязки к нему
- - ## Для работы с LongPoll
+ - ## Для работы с LongPoll (2 вид)
  ```python
 from vkbee import API
 from vkbee.longpoll import BotLongpoll, Session
