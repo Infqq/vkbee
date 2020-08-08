@@ -3,7 +3,7 @@ import time
 import asyncio
 import aiohttp
 
-class API:
+class Session:
     def __init__(self,token, loop, api_version="5.122"):
         self.token = token
         self.api_version = api_version
