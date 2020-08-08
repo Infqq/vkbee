@@ -5,7 +5,7 @@ with open("README.md", "r", encoding="utf-8") as f:
 
 setuptools.setup(
     name="vkbee",
-    version="3.9.1",
+    version="3.9.2",
     authors=["YamkaFox", "sergeyfilippov1", "UHl0aG9uZWVy"],
     author_email="cryptoyamafox@gmail.com",
     description="Simple async VK library faster than vk_api",
