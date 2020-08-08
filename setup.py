@@ -1,15 +1,16 @@
 import setuptools
 
-with open("README.md", "r", encoding="utf-8") as fh:
-    long_description = fh.read()
+with open("README.md", "r", encoding="utf-8") as f:
+    readme = f.read()
 
 setuptools.setup(
     name="vkbee",
-    version="3.9",
+    version="3.9.1",
     authors=["YamkaFox", "sergeyfilippov1", "UHl0aG9uZWVy"],
     author_email="cryptoyamafox@gmail.com",
     description="Simple async VK library faster than vk_api",
-    long_description=long_description,
+    long_description=readme,
+    long_description_content_type="text/markdown",
     url="https://github.com/asyncvk/vkbee",
     packages=setuptools.find_packages(),
     license="Mozilla Public License 2.0",
