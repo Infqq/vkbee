@@ -43,4 +43,3 @@ loop.run_until_complete(main(loop))
 # Сообщество
 - [VK Chat](https://vk.me/join/AJQ1dyuhehj8I0vilnQR9XtB)
 - [Telegram Chat](https://t.me/joinchat/IJQN8Bj1OSCtmg86-2thrw)
-- [Library Stats](https://pythonvk.github.io)
