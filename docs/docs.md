@@ -6,7 +6,7 @@
 		- [Для работы с Longpoll](https://github.com/vkbee/vkbee/blob/master/docs/quick_start.md#для-работы-с-longpoll)
 - [Вызов методов](https://github.com/vkbee/vkbee/blob/master/docs/methods_call.md)
     - [API Auth](https://github.com/vkbee/vkbee/blob/master/docs/methods_call.md#api-auth)
-    - [LongPoll Auth](https://github.com/vkbee/vkbee/blob/master/docs/methods_call.md#api-auth)
+    - [LongPoll Auth](https://github.com/vkbee/vkbee/blob/master/docs/methods_call.md#longpoll-auth)
     - [Парсинг ответа](https://github.com/vkbee/vkbee/blob/master/docs/methods_call.md#парсинг-ответа)
 - [Longpoll](https://github.com/vkbee/vkbee/blob/master/docs/longpoll.md)
     - [Bot Longpoll](https://github.com/vkbee/vkbee/blob/master/docs/longpoll.md#bot-longpoll)
