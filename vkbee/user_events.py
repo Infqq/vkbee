@@ -50,3 +50,4 @@ def event_flags_get(number)
         return 'NON_READ_MESSAGES_UPPED'
     if number == 114:
         return 'NOTIFY_SETTINGS_CHANGED'
+    return 'NONE_VK_EVENT'
