@@ -43,3 +43,10 @@ def event_flags_get(number)
     if number == 63:
         return 'USERS_TYPING'
     if number == 64:
+        return 'USER_AUDIO_WRITING'
+    if number == 70:
+        return 'USER_CALLED'
+    if number == 80:
+        return 'NON_READ_MESSAGES_UPPED'
+    if number == 114:
+        return 'NOTIFY_SETTINGS_CHANGED'
