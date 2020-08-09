@@ -135,7 +135,7 @@ class UserLongpoll:
         # r = await self.s.post(self.method_url, data=data)
         r = await self.vk.call("messages.getLongPollServer", data=data)
         self.key = r["response"]["key"]
-        self.server = r["response"]["server"]
+        self.server = 'https://{}'.format(r["response"]["server"])
         self.url = self.server
 
         if update_ts:
@@ -149,7 +149,6 @@ class UserLongpoll:
             "wait": self.wait,
         }
         response = await self.vk.s.get(self.url, params=params)
-        print(response)
 
         self.request_count += 1
         # work_time = time.time() - self.start_time
