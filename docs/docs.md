@@ -9,3 +9,4 @@
     - [Парсинг ответа](https://github.com/vkbee/vkbee/blob/master/docs/methods_call.md#парсинг-ответа)
 - [Longpoll](https://github.com/vkbee/vkbee/blob/master/docs/longpoll.md)
     - [Bot Longpoll](https://github.com/vkbee/vkbee/blob/master/docs/longpoll.md#bot-longpoll)
+    - [User Longpoll](https://github.com/vkbee/vkbee/blob/master/docs/longpoll.md#bot-longpoll)
