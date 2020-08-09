@@ -149,6 +149,7 @@ class UserLongpoll:
             "wait": self.wait,
         }
         response = await self.vk.s.get(self.url, params=params)
+        print(response)
 
         self.request_count += 1
         # work_time = time.time() - self.start_time
