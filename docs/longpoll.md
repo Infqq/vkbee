@@ -8,8 +8,13 @@ async for event in longpoll.events():
 
 ## User Longpoll
 ```python
-import vkbee.user_events
+from vkbee.user_events import get_event_type
 ...
 async for event in longpoll.events():
-    event_type = get_event_type(event)
+    event_type = get_event_type(event[0])
+    if event_type == 'ADD_NEW_MESSAGE':
+        user_id = event[3]
+        message_text = event[6]
 ```
+
+Типы событий и их структура описаны в официальной документации ВКонтакте: https://vk.com/dev/using_longpoll_2
