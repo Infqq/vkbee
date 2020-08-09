@@ -8,7 +8,8 @@ async for event in longpoll.events():
 
 ## User Longpoll
 ```python
-from vkbee.user_events import get_event
+import vkbee.user_events
 ...
 async for event in longpoll.events():
+    event_type = get_event_type(event)
 ```

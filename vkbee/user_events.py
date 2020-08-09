@@ -1,4 +1,4 @@
-def get_event(number)
+def get_event_type(number):
     if number == 1:
         return 'REPLACE_MESSAGE_FLAGS' # Замена флагов сообщения
     if number == 2:
