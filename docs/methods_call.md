@@ -4,8 +4,16 @@
 ```python
 async def main(loop):
     vk = vk_s.get_api() 
-    await vk_s.messages.send(chat_id=1, message='VKBEE', random_id=0)
+    await vk.messages.send(chat_id=1, message='VKBEE', random_id=0)
 ```
+### Разбор аргументов
+| Параметр | Описание |
+| -------- | ---------|
+| vk | Авторизированный пользователь (сессия)
+| vk_s  | Авторизированный пользователь (упрощенная  сессия)
+| chat_id | Числовой идентификатор чата для доставки сообщения
+| message | Сообщение
+| random_id | Рандомный идентификатор (0 - генерация на стороне ВКонтакте
 
  ## При авторизации для работы с LongPoll
 ```python
