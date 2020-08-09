@@ -95,31 +95,3 @@ class API:
             raise error
 
         return r["response"]
-
-    def get_api(self):
-        return ApiMethod(self)
-
-
-class ApiMethod:
-
-    __slots__ = ("_vk", "_method")
-
-    def __init__(self, vk, method=None):
-        self._vk = vk
-        self._method = method
-
-    def __getattr__(self, method):
-        if "_" in method:
-            m = method.split("_")
-            method = m[0] + "".join(i.title() for i in m[1:])
-
-        return ApiMethod(
-            self._vk, (self._method + "." if self._method else "") + method
-        )
-
-    async def __call__(self, **kwargs):
-        for k, v in six.iteritems(kwargs):
-            if isinstance(v, (list, tuple)):
-                kwargs[k] = ",".join(str(x) for x in v)
-
-        return await self._vk.call(self._method, kwargs)

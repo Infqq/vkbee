@@ -6,11 +6,11 @@ import vkbee
 ```
 
 ## Авторизация
- - ## Для работы с API
+  ## Для работы с API
  ```python
 from vkbee import API
 async def main(loop):
-    vk = API(token='token', loop=loop)
+    vk_session = API(token='token', loop=loop)
   ```
 ### Разбор аргументов
 | Параметр | Описание |
@@ -18,11 +18,11 @@ async def main(loop):
 | token | Ключ доступа
 | loop  | Цикл событий
 
- - ## Для работы с Longpoll
+  ## Для работы с Longpoll
  ```python
 from vkbee.longpoll import BotLongpoll, Session
 async def main(loop):
-    vk = Session(token='token', loop=loop)
+    vk_session = Session(token='token', loop=loop)
     longpoll = BotLongpoll(vk_session, groupid, wait)
   ```
 ### Разбор аргументов

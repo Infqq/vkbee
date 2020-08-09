@@ -1,39 +1,20 @@
 # Вызов методов
- ## API Auth
-
+## Синтаксис вызова
 ```python
-async def main(loop):
-    vk = vk_s.get_api() 
-    await vk.messages.send(chat_id=1, message='VKBEE', random_id=0)
+await API.call(vk_session, 'users.get', {'user_id': 1})
 ```
+
 ### Разбор аргументов
 | Параметр | Описание |
 | -------- | ---------|
-| vk | Авторизированный пользователь (сессия)
-| vk_s  | Авторизированный пользователь (упрощенная  сессия)
-| chat_id | Числовой идентификатор чата для доставки сообщения
-| message | Сообщение
-| random_id | Рандомный идентификатор (0 - генерация на стороне ВКонтакте
+| vk_session | Сессия авторизации ([Авторизация](https://github.com/vkbee/vkbee/blob/master/docs/quick_start.md#авторизация))
+| method_name  | Название метода
+| data | Параметры запроса (в json)
 
- ## LongPoll Auth
-```python
-async def main(loop):
-    await API.call(vk_session, 'messages.send', {'user_id': user_id, 'message': message_text, 'random_id': 0})
-```    
-| Параметр | Описание |
-| -------- | ---------|
-| vk_session | Авторизированный пользователь (сессия)
-| json  | Запрос в json
-
-
+ Список методов и их параметров имеется в официальной документации ВКонтакте: https://vk.com/dev/methods
 
 ## Парсинг ответа
-
-Буду использовать вариацию с LongPoll Auth
-
 ```python
-async def main(loop):
-    a=await API.call(vk_session, 'messages.send', {'user_id': user_id, 'message': message_text, 'random_id': 0})
-    print(a['response'])
+response = await API.call(vk_session, 'users.get', {'user_id': 1})
+first_name = response['response']['first_name']
 ```
- В примере мы спарсили ответ response от вызова метода.    
