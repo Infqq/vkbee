@@ -39,3 +39,7 @@ loop.run_until_complete(main(loop))
 ```
 
 Более расширенное использование описано в [документации](https://github.com/vkbee/vkbee/blob/master/docs/docs.md)
+
+# Сообщество
+[VK Chat](https://vk.me/join/AJQ1dyuhehj8I0vilnQR9XtB)
+[Telegram Chat](https://t.me/joinchat/IJQN8Bj1OSCtmg86-2thrw)
