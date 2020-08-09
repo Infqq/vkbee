@@ -1,5 +1,5 @@
 # Вызов методов
- ## При авторизации для работы с API
+ ## API Auth
 
 ```python
 async def main(loop):
@@ -15,14 +15,25 @@ async def main(loop):
 | message | Сообщение
 | random_id | Рандомный идентификатор (0 - генерация на стороне ВКонтакте
 
- ## При авторизации для работы с LongPoll
+ ## LongPoll Auth
 ```python
 async def main(loop):
     await API.call(vk_session, 'messages.send', {'user_id': user_id, 'message': message_text, 'random_id': 0})
 ```    
+| Параметр | Описание |
+| -------- | ---------|
+| vk_session | Авторизированный пользователь (сессия)
+| json  | Запрос в json
 
 
 
 ## Парсинг ответа
 
-TODO
+Буду использовать вариацию с LongPoll Auth
+
+```python
+async def main(loop):
+    a=await API.call(vk_session, 'messages.send', {'user_id': user_id, 'message': message_text, 'random_id': 0})
+    print(a['response'])
+```
+ В примере мы спарсили ответ response от вызова метода.    
