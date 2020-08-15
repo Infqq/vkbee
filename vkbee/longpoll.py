@@ -1,7 +1,6 @@
-import json
-import time
+from time import time
+from aiohttp import ClientSession
 import asyncio
-import aiohttp
 
 class Session:
     def __init__(self,token, loop, api_version="5.122"):
@@ -12,7 +11,7 @@ class Session:
         self.s = aiohttp.ClientSession()
 
         self.last_request_time = 0
-        self.start_time = time.time()
+        self.start_time = time()
         self.request_count = 0
 
     async def call(self,method_name, data):
@@ -27,11 +26,11 @@ class Session:
         #     print(f"SLEEP - {self.request_count}")
         #     await asyncio.sleep(1)
         
-        self.last_request_time = time.time()
+        self.last_request_time = time()
         r = await self.s.post(url, data=data)
         
 
-        work_time = time.time() - self.start_time
+        work_time = time() - self.start_time
         avr_time = work_time / self.request_count
         speed = self.request_count / work_time
         #print(f"All - {self.request_count}")
@@ -61,7 +60,7 @@ class BotLongpoll:
         self.key = None
         self.server = None
         self.ts = None
-        self.start_time = time.time()
+        self.start_time = time()
         self.request_count = 0
 
     async def update_server(self,update_ts=True):
@@ -127,7 +126,7 @@ class UserLongpoll:
         self.key = None
         self.server = None
         self.ts = None
-        self.start_time = time.time()
+        self.start_time = time()
         self.request_count = 0
 
     async def update_server(self,update_ts=True):
