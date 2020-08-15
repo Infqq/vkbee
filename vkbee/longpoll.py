@@ -1,5 +1,5 @@
 from time import time
-from aiohttp import ClientSession
+from aiohttp
 import asyncio
 
 class Session:
