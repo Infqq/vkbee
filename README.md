@@ -3,6 +3,7 @@
 <p align="center">
     <img alt="Made with Python" src="https://img.shields.io/badge/Made%20with-Python-%23FFD242?logo=python&logoColor=white">
     <img alt="Downloads" src="https://pepy.tech/badge/vkbee">
+    <img alt="License" src="https://img.shields.io/github/license/asyncvk/vkbee?style=flat-square)">
 </p>
 
 ## Установка
