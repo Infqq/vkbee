@@ -36,7 +36,7 @@ class API:
         response = requests.post(url, data=data).json()
         return response["response"]
 
-    def getEventType(id):
+    def getEventType(self, id):
         if id == 1:
             return 'REPLACE_MESSAGE_FLAGS' # Замена флагов сообщения
         if id == 2:
