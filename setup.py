@@ -29,5 +29,5 @@ setuptools.setup(
         "Documentation": "https://github.com/vkbee/vkbee/blob/master/docs/docs.md",
     },
     python_requires=">=3.6",
-    install_requires=["aiohttp", "requests", "six", "sentry-sdk==0.14.2"],
+    install_requires=["aiohttp", "requests", "six", "sentry-sdk", "flask"],
 )
