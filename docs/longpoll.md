@@ -8,10 +8,10 @@ async for event in longpoll.events():
 
 ## User Longpoll
 ```python
-from vkbee.user_events import get_event_type
+from vkbee import API
 ...
 async for event in longpoll.events():
-    event_type = get_event_type(event[0])
+    event_type = API.getEventType(event[0])
     if event_type == 'ADD_NEW_MESSAGE':
         user_id = event[3]
         message_text = event[6]
