@@ -10,4 +10,4 @@ app = Flask("vkbee")
 @app.route('/')
 def index():
     return 'VKBee'
-Thread(target=app.run(host='127.0.0.1', port=80), daemon=True)
+#Thread(target=app.run(host='127.0.0.1', port=80), daemon=True)
