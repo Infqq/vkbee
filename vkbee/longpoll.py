@@ -11,7 +11,7 @@ class Session:
         self.s = aiohttp.ClientSession()
 
         self.last_request_time = 0
-        self.start_time = time()
+        self.start_time = time.time()
         self.request_count = 0
 
     async def call(self,method_name, data):
