@@ -60,7 +60,7 @@ class BotLongpoll:
         self.key = None
         self.server = None
         self.ts = None
-        self.start_time = time()
+        self.start_time = time.time()
         self.request_count = 0
 
     async def update_server(self,update_ts=True):
